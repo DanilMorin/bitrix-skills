@@ -81,3 +81,13 @@ Return:
 5. Low-risk fixes.
 6. Medium/high-risk suggestions.
 7. Verification steps.
+
+## Available scripts
+
+When auditing a project, use these scripts if possible:
+
+```bash
+npm run scan:inline
+npm run scan:alt
+npm run scan:risky-classes
+npm run scan:all

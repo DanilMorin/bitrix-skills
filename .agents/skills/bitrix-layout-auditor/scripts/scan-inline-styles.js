@@ -63,7 +63,9 @@ async function main() {
             console.log(`File: ${problem.file}, Line: ${problem.line}, Style: ${problem.value}`);
         });
     }
-    main().catch(err => {
-        console.error('Error:', err);
-    });
 }
+
+main().catch((error) => {
+    console.error('Error scanning files:', error);
+    process.exit(1);
+});
