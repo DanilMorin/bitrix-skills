@@ -1,0 +1,22 @@
+{
+  "name": "bitrix-skills",
+  "version": "0.1.0",
+  "description": "Codex skills for auditing static layouts and preparing them for 1C-Bitrix integration.",
+  "type": "module",
+  "scripts": {
+    "scan:inline": "node .agents/skills/bitrix-layout-auditor/scripts/scan-inline-styles.js",
+    "scan:alt": "node .agents/skills/bitrix-layout-auditor/scripts/scan-empty-alt.js",
+    "scan:html": "npm run scan:inline && npm run scan:alt",
+    "scan:risky-classes": "node .agents/skills/bitrix-layout-auditor/scripts/scan-risky-classes.js",
+    "scan:all": "npm run scan:html && npm run scan:risky-classes"
+  },
+  "keywords": [
+    "codex",
+    "skills",
+    "bitrix",
+    "html",
+    "scss",
+    "audit"
+  ],
+  "license": "MIT"
+}
