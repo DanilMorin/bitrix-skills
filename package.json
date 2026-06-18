@@ -6,9 +6,10 @@
   "scripts": {
     "scan:inline": "node .agents/skills/bitrix-layout-auditor/scripts/scan-inline-styles.js",
     "scan:alt": "node .agents/skills/bitrix-layout-auditor/scripts/scan-empty-alt.js",
-    "scan:html": "npm run scan:inline && npm run scan:alt",
     "scan:risky-classes": "node .agents/skills/bitrix-layout-auditor/scripts/scan-risky-classes.js",
-    "scan:all": "npm run scan:html && npm run scan:risky-classes"
+    "scan:repeated": "node .agents/skills/bitrix-component-mapper/scripts/scan-repeated-classes.js",
+    "scan:html": "npm run scan:inline && npm run scan:alt",
+    "scan:all": "npm run scan:html && npm run scan:risky-classes && npm run scan:repeated"
   },
   "keywords": [
     "codex",
